@@ -29,6 +29,19 @@ Finally, **Section 5** is to explore angular velocities of the different bodies.
 
 ## Regression
 The regression folder contains a Jupyter notebook, regresssion_techniques.ipynb that uses linear regression techniques to learn positions of a geo-centric coordinate system of the heavens. The notebook also contains code for a simple regression to learn moon phases. Simply run the cells to perform the data-analysis.
+It is organized as follows:
+* **Preliminaries**: Code to import necessary libraries,  load planet data, and visualize the data
+* **Linear Regression**: Bulk of code. Contains
+    * Featurization: generates Fourier features
+    * Least Square Methods: OLS and Ridge regression for complex-valued matrices
+    * Training/Testing Loop on X,Y:  Using fourier features on X,Y epicycles
+    * Peaks and Ptolemy: Retrieves 2 largest coeficients to plot prediction
+    * Predicting Forward: Testing how well the model predicts in the future
+    * Learning Z coordinates: Real valued Fourier features to learn Z coordinate
+    * 3D Visualization: Generate 3D graphs of the learned paths
+* **Regression Moon Phases**:  1D, real valued Fourier features to learn the phases of the moon
+
+More documentation is written in the notebook itself.
 
 ## GIFs
 Example GIFs to visualize the motion of the planets given this geocentric coordinate system and the epicycle model.  Also contained are examples of learned orbits.
